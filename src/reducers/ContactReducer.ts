@@ -70,3 +70,4 @@ const contactReducer = (
 }
 
 export default contactReducer
+export default RootState
