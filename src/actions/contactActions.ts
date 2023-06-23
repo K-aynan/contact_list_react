@@ -1,9 +1,28 @@
-import {
-  ADD_CONTACT,
-  REMOVE_CONTACT,
-  EDIT_CONTACT,
-  ContactActionTypes
-} from '../reducers/ContactReducer'
+import { Contact } from '../models/ContactModels'
+
+export const ADD_CONTACT = 'ADD_CONTACT'
+export const REMOVE_CONTACT = 'REMOVE_CONTACT'
+export const EDIT_CONTACT = 'EDIT_CONTACT'
+
+interface AddContactAction {
+  type: typeof ADD_CONTACT
+  payload: Contact
+}
+
+interface RemoveContactAction {
+  type: typeof REMOVE_CONTACT
+  payload: number
+}
+
+interface EditContactAction {
+  type: typeof EDIT_CONTACT
+  payload: Contact
+}
+
+export type ContactActionTypes =
+  | AddContactAction
+  | RemoveContactAction
+  | EditContactAction
 
 export const addContact = (contact: Contact): ContactActionTypes => {
   return {
@@ -24,11 +43,4 @@ export const editContact = (contact: Contact): ContactActionTypes => {
     type: EDIT_CONTACT,
     payload: contact
   }
-}
-
-export interface Contact {
-  id: number
-  fullName: string
-  email: string
-  phone: string
 }

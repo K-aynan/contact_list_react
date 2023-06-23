@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { addContact, editContact } from '../actions/contactActions'
-import { Contact } from '../reducers/ContactReducer'
+import { Contact } from '../models/ContactModels'
 
 interface ContactFormProps {
   contact?: Contact

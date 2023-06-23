@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { removeContact } from '../actions/contactActions'
-import { Contact } from '../reducers/ContactReducer'
+import { Contact } from '../models/ContactModels'
 
 interface ContactItemProps {
   contact: Contact
